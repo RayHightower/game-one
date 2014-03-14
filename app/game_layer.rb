@@ -43,7 +43,7 @@ class GameLayer < Joybox::Core::Layer
 
       add_child(pumpkin)
 
-      # pumpkin.body.apply_force force: end_touch_location - @starting_touch_locatiion
+      pumpkin.body.apply_force force: (end_touch_location - @starting_touch_location)
 
     end
 
