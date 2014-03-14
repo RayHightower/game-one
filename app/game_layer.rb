@@ -39,6 +39,12 @@ class GameLayer < Joybox::Core::Layer
 
       end_touch_location = end_touch.location
 
+      pumpkin = new_pumpkin_sprite
+
+      add_child(pumpkin)
+
+      pumpkin.physics_body.apply_force force: end_touch_location - @starting_touch_locatiion
+
     end
 
     def new_pumpkin_sprite
