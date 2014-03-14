@@ -6,5 +6,9 @@ class GameScene < Joybox::Core::Scene
 
     add_child(background_layer)
     
+    game_layer = GameLayer.new
+
+    add_child(game_layer)
+
   end
 end
