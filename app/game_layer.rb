@@ -3,7 +3,7 @@ class GameLayer < Joybox::Core::Layer
   def on_enter
 
     @player_plane = Sprite.new file_name: 'biplane.jpg',
-                                position: [208, Screen.half_height]
+                                position: [258, Screen.half_height]
 
     add_child(@player_plane)
 
@@ -13,7 +13,7 @@ class GameLayer < Joybox::Core::Layer
       @world.step delta: dt
     end
     
-    body = @world.new_body position: [10, Screen.half_height]
+    body = @world.new_body position: [80, Screen.half_height]
 
     @enemy_plane = PhysicsSprite.new file_name: 'blue-biplane.jpg',
                                       body: body
