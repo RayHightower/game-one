@@ -29,8 +29,30 @@ class GameLayer < Joybox::Core::Layer
 
       starting_touch = touches.any_object
 
-      @starting_touch_locatino = starting_touch.location
+      @starting_touch_location = starting_touch.location
+
     end
+
+    on_touches_ended do | touches, event |
+
+      end_touch = touches.any_object
+
+      end_touch_location = end_touch.location
+
+    end
+
+    def new_pumpkin_sprite
+
+      pumpkin_body = @world.new_body position: @player_plane.position,
+                                      type: KDynamicBodyType
+
+      @pumpkin_sprite = PhysicsSprite.new file_name: 'pumpkin.jpg',
+                                              body: pumpkin_body
+      
+      @pumpkin_sprite
+      
+    end
+
     
   end
 end
