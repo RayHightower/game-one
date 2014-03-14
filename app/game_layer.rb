@@ -19,6 +19,18 @@ class GameLayer < Joybox::Core::Layer
                                       body: body
 
     add_child(@enemy_plane)
+    
+    init_controls
+  end
 
+  def init_controls
+    
+    on_touches_began do | touches, event |
+
+      starting_touch = touches.any_object
+
+      @starting_touch_locatino = starting_touch.location
+    end
+    
   end
 end
