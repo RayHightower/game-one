@@ -7,7 +7,7 @@ class GameLayer < Joybox::Core::Layer
 
     add_child(@player_plane)
 
-    @world = World.new gravity: [0.0, -3.8]
+    @world = World.new gravity: [0.0, -9.8]
 
     schedule_update do | dt |
       @world.step delta: dt
