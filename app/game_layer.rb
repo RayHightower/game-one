@@ -13,7 +13,7 @@ class GameLayer < Joybox::Core::Layer
     
     body = @world.new_body position: [80, 450]  # Screen.half_height]
 
-    @enemy_plane = PhysicsSprite.new file_name: 'blue-biplane.jpg',
+    @enemy_plane = PhysicsSprite.new file_name: 'blue-biplane-transparent.png',
                                       body: body
     add_child(@enemy_plane)
     
