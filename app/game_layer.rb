@@ -37,7 +37,7 @@ class GameLayer < Joybox::Core::Layer
     def new_pumpkin_sprite
       pumpkin_body = @world.new_body position: @player_plane.position,
                                       type: KDynamicBodyType
-      @pumpkin_sprite = PhysicsSprite.new file_name: 'pumpkin.jpg',
+      @pumpkin_sprite = PhysicsSprite.new file_name: 'pumpkin-transparent.png',
                                               body: pumpkin_body
       @pumpkin_sprite
     end
