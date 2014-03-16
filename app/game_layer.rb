@@ -3,7 +3,7 @@ class GameLayer < Joybox::Core::Layer
   def on_enter
 
     @player_plane = Sprite.new file_name: 'biplane.jpg',
-                                position: [258, Screen.half_height]
+                                position: [258, 450] # Screen.half_height]
 
     add_child(@player_plane)
 
