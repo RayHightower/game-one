@@ -2,7 +2,7 @@ class GameLayer < Joybox::Core::Layer
 
   def on_enter
     @yellow_plane = Sprite.new file_name: 'yellow-biplane-transparent.png',
-                                position: [258, Screen.half_width ] # Screen.half_height]
+                                position: [500, Screen.half_width ] # Screen.half_height]
     add_child(@yellow_plane)
 
     @world = World.new gravity: [0.0, -9.8]
