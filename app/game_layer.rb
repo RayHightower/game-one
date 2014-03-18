@@ -1,9 +1,9 @@
 class GameLayer < Joybox::Core::Layer
 
   def on_enter
-    @player_plane = Sprite.new file_name: 'biplane-transparent.png',
+    @yellow_plane = Sprite.new file_name: 'biplane-transparent.png',
                                 position: [258, Screen.half_width ] # Screen.half_height]
-    add_child(@player_plane)
+    add_child(@yellow_plane)
 
     @world = World.new gravity: [0.0, -9.8]
 
@@ -13,9 +13,9 @@ class GameLayer < Joybox::Core::Layer
     
     body = @world.new_body position: [80, Screen.half_width ]  # Screen.half_height]
 
-    @enemy_plane = PhysicsSprite.new file_name: 'blue-biplane-transparent.png',
+    @blue_plane = PhysicsSprite.new file_name: 'blue-biplane-transparent.png',
                                       body: body
-    add_child(@enemy_plane)
+    add_child(@blue_plane)
     
     init_controls
   end
@@ -35,7 +35,7 @@ class GameLayer < Joybox::Core::Layer
     end
 
     def new_pumpkin_sprite
-      pumpkin_body = @world.new_body position: @player_plane.position,
+      pumpkin_body = @world.new_body position: @yellow_plane.position,
                                       type: KDynamicBodyType
       @pumpkin_sprite = PhysicsSprite.new file_name: 'pumpkin-transparent.png',
                                               body: pumpkin_body
