@@ -1,7 +1,7 @@
 class GameLayer < Joybox::Core::Layer
 
   def on_enter
-    @yellow_plane = Sprite.new file_name: 'biplane-transparent.png',
+    @yellow_plane = Sprite.new file_name: 'yellow-biplane-transparent.png',
                                 position: [258, Screen.half_width ] # Screen.half_height]
     add_child(@yellow_plane)
 
